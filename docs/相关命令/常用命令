@@ -1,0 +1,3 @@
+docker cp /jars/shop-goods-provider-1.0-SNAPSHOT.jar 4554265ad79a:/usr/local/
+
+

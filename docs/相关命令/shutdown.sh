@@ -1,0 +1,5 @@
+#!/bin/bash
+#重启消费者
+docker restart rpc_ali_pay_consumer rpc_user_consumer rpc_order_consumer rpc_goods_consumer rpc_shop_pre
+#重启提供者
+docker restart rpc_user_provider rpc_goods_provider rpc_order_provider rpc_ali_pay_provider

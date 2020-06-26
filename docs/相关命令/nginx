@@ -1,0 +1,75 @@
+#goods.local.com
+server {
+        listen       80;
+        server_name  goods.local.com;
+        location / {
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_pass http://192.168.10.108:8083;
+         }
+         error_page   500 502 503 504  /50x.html;
+         location = /50x.html {
+            root   html;
+            index  index.html index.htm index.jsp index.action default.html;
+         }
+    }
+#order.local.com
+server {
+        listen       80;
+        server_name  order.local.com;
+        location / {
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_pass http://192.168.10.109:8084;
+         }
+         error_page   500 502 503 504  /50x.html;
+         location = /50x.html {
+            root   html;
+            index  index.html index.htm index.jsp index.action default.html;
+         }
+    }
+#aliPay.local.com
+server {
+        listen       80;
+        server_name  aliPay.local.com;
+        location / {
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_pass http://192.168.10.113:8087;
+         }
+         error_page   500 502 503 504  /50x.html;
+         location = /50x.html {
+            root   html;
+            index  index.html index.htm index.jsp index.action default.html;
+         }
+    }
+#user.local.com
+server {
+        listen       80;
+        server_name  user.local.com;
+        location / {
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_pass http://192.168.10.111:8082;
+         }
+         error_page   500 502 503 504  /50x.html;
+         location = /50x.html {
+            root   html;
+            index  index.html index.htm index.jsp index.action default.html;
+         }
+}
+#www.qg.com
+server {
+        listen       80;
+        server_name  www.qg.com;
+        location / {
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_pass http://192.168.10.112:8888;
+         }
+         error_page   500 502 503 504  /50x.html;
+         location = /50x.html {
+            root   html;
+            index  index.html index.htm index.jsp index.action default.html;
+         }
+}
