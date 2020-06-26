@@ -5,7 +5,7 @@ package cn.bdqn.common;
  */
 public class DtoUtil {
 
-    public static String success="true";
+        public static String success="true";
 
     public static String fail="false";
 
